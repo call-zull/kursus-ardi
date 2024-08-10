@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/Filament/Resources/MateriResource/Pages/EditMateri.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723261782406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723261782406,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Filament\\Resources\\MateriResource\\Pages;\n\nuse App\\Filament\\Resources\\MateriResource;\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\EditRecord;\n\nclass EditMateri extends EditRecord\n{\n    protected static string $resource = MateriResource::class;\n\n    protected function getRedirectUrl(): string\n    {\n        return $this->getResource()::getUrl('index');\n    }\n\n    protected function getHeaderActions(): array\n    {\n        return [\n            Actions\\DeleteAction::make(),\n        ];\n    }\n}"
+        }
+    ]
+}

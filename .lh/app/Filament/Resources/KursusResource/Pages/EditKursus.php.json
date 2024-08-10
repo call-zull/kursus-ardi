@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/Filament/Resources/KursusResource/Pages/EditKursus.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723261748349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723261748349,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Filament\\Resources\\KursusResource\\Pages;\n\nuse App\\Filament\\Resources\\KursusResource;\nuse Filament\\Actions;\nuse Filament\\Resources\\Pages\\EditRecord;\n\nclass EditKursus extends EditRecord\n{\n    protected static string $resource = KursusResource::class;\n\n    protected function getRedirectUrl(): string\n    {\n        return $this->getResource()::getUrl('index');\n    }\n\n    protected function getHeaderActions(): array\n    {\n        return [\n            Actions\\DeleteAction::make(),\n        ];\n    }\n}"
+        }
+    ]
+}

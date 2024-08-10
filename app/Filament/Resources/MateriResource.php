@@ -49,7 +49,10 @@ class MateriResource extends Resource
                 Tables\Columns\TextColumn::make('judul')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('link')
-                    ->searchable(),
+                    ->color('info')
+                    ->url(fn($record) => $record->link) // Format URL dari field link
+                    ->searchable()
+                    ->extraAttributes(['target' => '_blank']), // Membuka link di tab baru
                 Tables\Columns\TextColumn::make('deskripsi')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('kursus.judul')
@@ -76,6 +79,7 @@ class MateriResource extends Resource
                 ]),
             ]);
     }
+
 
     public static function getRelations(): array
     {
