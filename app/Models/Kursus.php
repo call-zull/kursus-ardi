@@ -9,6 +9,7 @@ class Kursus extends Model
 {
     protected $table = 'kursus';
     protected $fillable = [
+        'image',
         'judul',
         'deskripsi',
         'durasi',

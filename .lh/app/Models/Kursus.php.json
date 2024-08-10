@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/Models/Kursus.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723296305255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723296305255,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Kursus extends Model\n{\n    protected $table = 'kursus';\n    protected $fillable = [\n        'image',\n        'judul',\n        'deskripsi',\n        'durasi',\n    ];\n\n    public function materi()\n    {\n        return $this->hasMany(Materi::class);\n    }\n}"
+        }
+    ]
+}

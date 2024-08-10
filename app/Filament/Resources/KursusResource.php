@@ -8,7 +8,9 @@ use App\Models\Kursus;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,6 +29,10 @@ class KursusResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\FileUpload::make('image')
+                    ->label('Gambar')
+                    ->image()
+                    ->required(),
                 Forms\Components\TextInput::make('judul')
                     ->required()
                     ->maxLength(255),
@@ -44,29 +50,41 @@ class KursusResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('judul')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('deskripsi')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('durasi')
+                Stack::make([
+                    Tables\Columns\ImageColumn::make('image'),
+                    TextColumn::make('judul')
+                        ->label('Judul')
+                        ->sortable()
+                        ->searchable()
+                        ->getStateUsing(fn($record) => 'Judul : ' . $record->judul),
+
+                    TextColumn::make('deskripsi')
+                        ->label('Deskripsi')
+                        ->getStateUsing(fn($record) => 'Deskripsi : ' . $record->deskripsi),
+
+                    TextColumn::make('durasi')
                     ->label('Durasi (Menit)')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                        ->numeric()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-            ])
+                        ->getStateUsing(fn($record) => 'Durasi : ' . $record->durasi . ' menit'),
+
+                    TextColumn::make('materi')
+                        ->label('Materi')
+                        ->getStateUsing(
+                            fn($record) =>
+                            'Materi : ' . $record->materi->pluck('judul')->implode(', ')
+                        ),
+                ])
+            ])->contentGrid([
+                    'md' => 2,
+                    'xl' => 2,
+                ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
