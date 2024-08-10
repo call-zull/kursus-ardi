@@ -16,28 +16,28 @@ class MateriSeeder extends Seeder
         Materi::create([
             'judul' => 'HTML untuk Pemula',
             'deskripsi' => 'Belajar HTML Lengkap',
-            'link' => 'https://kursus/html-ardi.com',
+            'link' => 'https://www.w3schools.com/html/',
             'kursus_id' => 1,
         ]);
 
         Materi::create([
             'judul' => 'CSS untuk Pemula',
             'deskripsi' => 'Belajar Dasar CSS',
-            'link' => 'https://kursus/css-ardi.com',
+            'link' => 'https://www.w3schools.com/css/',
             'kursus_id' => 1,
         ]);
 
         Materi::create([
             'judul' => 'Android untuk Pemula',
             'deskripsi' => 'Belajar Dasar Android',
-            'link' => 'https://kursus/Android-ardi.com',
+            'link' => 'https://developer.android.com',
             'kursus_id' => 2,
         ]);
 
         Materi::create([
             'judul' => 'Kotlin untuk Pemula',
             'deskripsi' => 'Belajar Dasar Kotlin',
-            'link' => 'https://kursus/Kotlin-ardi.com',
+            'link' => 'https://kotlinlang.org/',
             'kursus_id' => 2,
         ]);
     }

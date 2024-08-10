@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1723261012064,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723299714581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     {\n         Materi::create([\n             'judul' => 'HTML untuk Pemula',\n             'deskripsi' => 'Belajar HTML Lengkap',\n-            'link' => 'https://kursus/html-ardi.com',\n+            'link' => 'https://www.w3schools.com/html/',\n             'kursus_id' => 1,\n         ]);\n \n         Materi::create([\n"
+                },
+                {
+                    "date": 1723299732739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \n         Materi::create([\n             'judul' => 'CSS untuk Pemula',\n             'deskripsi' => 'Belajar Dasar CSS',\n-            'link' => 'https://kursus/css-ardi.com',\n+            'link' => 'https://www.w3schools.com/css/',\n             'kursus_id' => 1,\n         ]);\n \n         Materi::create([\n"
+                },
+                {
+                    "date": 1723299752127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n \n         Materi::create([\n             'judul' => 'Kotlin untuk Pemula',\n             'deskripsi' => 'Belajar Dasar Kotlin',\n-            'link' => 'https://kursus/Kotlin-ardi.com',\n+            'link' => 'https://kotlinlang.org/',\n             'kursus_id' => 2,\n         ]);\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723299766277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \n         Materi::create([\n             'judul' => 'Android untuk Pemula',\n             'deskripsi' => 'Belajar Dasar Android',\n-            'link' => 'https://kursus/Android-ardi.com',\n+            'link' => 'https://developer.android.com',\n             'kursus_id' => 2,\n         ]);\n \n         Materi::create([\n"
                 }
             ],
             "date": 1723261012064,
