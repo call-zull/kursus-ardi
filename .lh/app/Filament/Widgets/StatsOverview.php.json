@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/Filament/Widgets/StatsOverview.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1723262528354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723262545723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n                 ->label('Total Materi')\n                 ->description('Jumlah Materi Yang Terdata')\n                 ->descriptionIcon('heroicon-o-document-text')\n                 ->icon('heroicon-o-document-text')\n-                ->color('warning'),\n+                ->color('info'),\n         ];\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723262573958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 ->label('Total Kursus')\n                 ->description('Jumlah Kursus Yang Terdata')\n                 ->descriptionIcon('heroicon-o-book-open')\n                 ->icon('heroicon-o-book-open')\n-                ->color('success'),\n+                ->color('gray'),\n \n             Stat::make('Total Materi', $totalMateri)\n                 ->label('Total Materi')\n                 ->description('Jumlah Materi Yang Terdata')\n"
+                },
+                {
+                    "date": 1723262588579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 ->label('Total Kursus')\n                 ->description('Jumlah Kursus Yang Terdata')\n                 ->descriptionIcon('heroicon-o-book-open')\n                 ->icon('heroicon-o-book-open')\n-                ->color('gray'),\n+                ->color('warning'),\n \n             Stat::make('Total Materi', $totalMateri)\n                 ->label('Total Materi')\n                 ->description('Jumlah Materi Yang Terdata')\n"
+                },
+                {
+                    "date": 1723262615736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n                 ->label('Total Kursus')\n                 ->description('Jumlah Kursus Yang Terdata')\n                 ->descriptionIcon('heroicon-o-book-open')\n                 ->icon('heroicon-o-book-open')\n-                ->color('warning'),\n+                ->color('success'),\n \n             Stat::make('Total Materi', $totalMateri)\n                 ->label('Total Materi')\n                 ->description('Jumlah Materi Yang Terdata')\n"
+                }
+            ],
+            "date": 1723262528353,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Filament\\Widgets;\n\nuse App\\Models\\Kursus;\nuse App\\Models\\Materi;\nuse Filament\\Widgets\\StatsOverviewWidget as BaseWidget;\nuse Filament\\Widgets\\StatsOverviewWidget\\Stat;\n\nclass StatsOverview extends BaseWidget\n{\n    protected function getStats(): array\n    {\n        // Menghitung jumlah total kursus dan materi\n        $totalKursus = Kursus::count();\n        $totalMateri = Materi::count();\n\n        return [\n            Stat::make('Total Kursus', $totalKursus)\n                ->label('Total Kursus')\n                ->description('Jumlah Kursus Yang Terdata')\n                ->descriptionIcon('heroicon-o-book-open')\n                ->icon('heroicon-o-book-open')\n                ->color('success'),\n\n            Stat::make('Total Materi', $totalMateri)\n                ->label('Total Materi')\n                ->description('Jumlah Materi Yang Terdata')\n                ->descriptionIcon('heroicon-o-document-text')\n                ->icon('heroicon-o-document-text')\n                ->color('warning'),\n        ];\n    }\n}"
+        }
+    ]
+}

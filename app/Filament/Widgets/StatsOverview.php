@@ -28,7 +28,7 @@ class StatsOverview extends BaseWidget
                 ->description('Jumlah Materi Yang Terdata')
                 ->descriptionIcon('heroicon-o-document-text')
                 ->icon('heroicon-o-document-text')
-                ->color('primary'),
+                ->color('info'),
         ];
     }
 }
