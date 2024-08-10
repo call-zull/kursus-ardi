@@ -1,0 +1,22 @@
+{
+    "sourceFile": "database/seeders/UserSeeder.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1723260732206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723260771100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n <?php\n \n namespace Database\\Seeders;\n \n+use App\\Models\\User;\n use Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents;\n use Illuminate\\Database\\Seeder;\n+use Illuminate\\Support\\Facades\\Hash;\n \n class UserSeeder extends Seeder\n {\n     /**\n"
+                }
+            ],
+            "date": 1723260732206,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Seeders;\n\nuse Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents;\nuse Illuminate\\Database\\Seeder;\n\nclass UserSeeder extends Seeder\n{\n    /**\n     * Run the database seeds.\n     */\n    public function run(): void\n    {\n        User::create([\n            'name' => 'Ardi',\n            'email' => 'ardi@gmail.com',\n            'password' => Hash::make('ardi'), // Password harus di-hash\n        ]);\n    }\n}"
+        }
+    ]
+}
