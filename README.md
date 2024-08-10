@@ -1,66 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website Kursus Online Ardi
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Oleh**: Muhammad Zulkifli  
+**Akun GitHub**: [call-zull](https://github.com/call-zull)
 
-## About Laravel
+## Teknologi yang Digunakan
+- Laravel 11
+- Filament
+- Livewire
+- Tailwind CSS
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tools yang Digunakan
+- Visual Studio Code
+- XAMPP
+- Chrome Browser
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Deskripsi Proyek
+Website ini dirancang untuk memantau dan mengelola kursus serta materi di dalamnya. Website ini dilengkapi dengan dua mode tampilan: **Dark Mode** dan **Light Mode** untuk memberikan pengalaman pengguna yang lebih nyaman dan fleksibel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Cara Clone dan Install
+Jika Anda ingin mengkloning dan menginstal repository ini, ikuti langkah-langkah berikut:
 
-## Learning Laravel
+1. Buat folder baru, lalu buka terminal dan ketik:
+   ```bash
+   git clone https://github.com/call-zull/kursus-ardi.git .
+2. Jalankan perintah berikut di terminal untuk menginstal dependensi:
+   ```bash
+    composer install
+3. Ubah nama file .env.example menjadi .env, lalu sesuaikan pengaturan database Anda dengan DB_DATABASE di file .env.
+4. Sesuaikan APP_URL di file .env dengan local server Anda. Contoh: http://127.0.0.1:8000.
+5. Jalankan perintah berikut di terminal untuk menghasilkan key aplikasi, nanti Jika diminta untuk overwrite, tekan "yes"
+     ```bash
+    php artisan key:generate
+6. Buat symbolic link untuk penyimpanan:
+    ```bash
+    php artisan storage:link
+7. Jalankan migrasi database dengan perintah:
+    ```bash
+    php artisan migrate:fresh --seed
+8. Mulai server Laravel dengan perintah:
+    ```bash
+    php artisan serve
+9. Jika mengalami error terkait sesi atau cache, jalankan:
+    ```bash
+    php artisan optimize:clear
+10. Anda Bisa Login Menggunakan :
+    Email : ardi@gmail.com
+    password : ardi
+11. Pada bagian kursus jika anda ingin melengkapi, Anda bisa menambahkan gambar dengan mengklik edit, lalu unggah gambar dan simpan. Jika Anda tidak memiliki gambar, saya telah               menyediakan beberapa gambar difolder public/kursus.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Selamat Mencoba !
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Tampilan Website
+berikut beberap tampilan project ini 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Tampilan Login
+Light Mode
+![Screenshot 2024-08-10 234857](https://github.com/user-attachments/assets/81e2853d-1a5d-4552-90a9-ef547573cca1)
 
-## Laravel Sponsors
+Dark Mode
+![Screenshot 2024-08-10 234835](https://github.com/user-attachments/assets/6dab9600-4139-4231-8793-e5e592f6bbfb)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Tampilan Dashboard
+Light Mode
+![Dashboard-LM](https://github.com/user-attachments/assets/dd977bb5-135b-429d-a547-fb4fd4ee1e1a)
 
-### Premium Partners
+Dark Mode
+![dashboard-DM](https://github.com/user-attachments/assets/dc98de5a-dff8-492c-b4f4-b0f6c40489bb)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Tampilan Kursus
+Light Mode
+![Kursus-LM](https://github.com/user-attachments/assets/bd71c6d0-3634-46d1-abc6-43af8b648198)
 
-## Contributing
+Dark Mode
+![kursus-DM](https://github.com/user-attachments/assets/dfac206b-603d-4fa8-b5e8-75ddf5751ae5)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### Create Kursus
+![create-kursus-LM](https://github.com/user-attachments/assets/1dcc5775-69bf-49b2-8dd8-cb7196b00e06)
 
-## Code of Conduct
+#### Contoh Create Kursus
+![example-create-kursus](https://github.com/user-attachments/assets/64a570b5-c9d1-4473-a34d-ee1169e0e92a)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Edit Kursus
+![edit-kursus](https://github.com/user-attachments/assets/37bd4f1a-6761-4f7e-a173-3b8ae07975f6)
 
-## Security Vulnerabilities
+#### Delete Kursus
+![delete-kursus](https://github.com/user-attachments/assets/9800e098-9bd6-4d4a-b470-b7eaa14a744e)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Tampilan Materi
+Light Mode
+![Materi-LM](https://github.com/user-attachments/assets/be9d6510-0b49-4d46-949d-a075bebea858)
 
-## License
+Dark Mode
+![materi-DM](https://github.com/user-attachments/assets/ef2be162-fd95-4659-ae41-3b8f561b41fa)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Create Materi
+![create-materi](https://github.com/user-attachments/assets/64c0a8cc-7347-4867-beff-a262a03a2ce9)
+
+#### Edit Materi
+![edit-materi](https://github.com/user-attachments/assets/0124fdbb-f5b0-467c-93c1-efd5813c588d)
+
+#### Delete Materi
+![delete-materi](https://github.com/user-attachments/assets/a1c1c6ca-9638-4fa3-8874-b7df31b17247)
+
+Sekian Terimakasih 🧑‍💻🙌
