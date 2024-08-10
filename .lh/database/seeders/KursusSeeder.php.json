@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1723260958075,
@@ -20,6 +20,10 @@
                 {
                     "date": 1723300086478,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n         Kursus::create([\n             'judul' => 'Android Developer',\n             'deskripsi' => 'Belajar Membuat Aplikasi Android untuk Pemula',\n             'durasi' => 120,\n-            'image' => Storage::url('kursus/android-dev.jpg'),\n+            'image' => '01J4YAZ22HVYVM4QAEQ19GV18Y.jpeg',\n         ]);\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723302035547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,13 @@\n         Kursus::create([\n             'judul' => 'Web Developer',\n             'deskripsi' => 'Belajar Membuat Website untuk Pemula',\n             'durasi' => 60,\n-            'image' => '01J4YAWN64QXAH87GTTVG1D4PG.jpeg',\n         ]);\n \n         Kursus::create([\n             'judul' => 'Android Developer',\n             'deskripsi' => 'Belajar Membuat Aplikasi Android untuk Pemula',\n             'durasi' => 120,\n-            'image' => '01J4YAZ22HVYVM4QAEQ19GV18Y.jpeg',\n         ]);\n     }\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723260958075,
