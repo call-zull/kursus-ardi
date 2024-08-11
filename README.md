@@ -51,7 +51,7 @@ Jika Anda ingin mengkloning dan menginstal repository ini, ikuti langkah-langkah
 Selamat Mencoba !
 
 ## Tampilan Website
-berikut beberap tampilan project ini 
+berikut beberapa tampilan project ini 
 
 ### Tampilan Login
 Light Mode
