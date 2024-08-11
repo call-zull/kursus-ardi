@@ -18,12 +18,12 @@
 Website ini dirancang untuk memantau dan mengelola kursus serta materi di dalamnya. Website ini dilengkapi dengan dua mode tampilan: **Dark Mode** dan **Light Mode** untuk memberikan pengalaman pengguna yang lebih nyaman dan fleksibel.
 
 ## Fitur
-1.Login Admin
-2.Dashboard Untuk mengetahui total kursus dan materi
-3.Tema Dark dan Light
-4.CRUD Kursus
-5.CRUD Materi
-6.Link To Materi
+1. Login Admin
+2. Dashboard Untuk mengetahui total kursus dan materi
+3. Tema Dark dan Light
+4. CRUD Kursus
+5. CRUD Materi
+6. Link To Materi
 
 ## Cara Clone dan Install
 Jika Anda ingin mengkloning dan menginstal repository ini, ikuti langkah-langkah berikut:
